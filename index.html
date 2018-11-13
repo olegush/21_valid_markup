@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/stylish-portfolio.css" rel="stylesheet">
   <!-- Custom Fonts -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   
   <meta charset="utf-8">
   <title>Агентство недвижимости Твой Дом</title>
@@ -138,35 +135,17 @@
 
   <!-- Map -->
   <section id="contact">
-    <div id="map" class="map" style="width: 100%; height: 100%"></div>
+    <div id="map" class="map"></div>
     
     <div class="container">
     <div class="row text-center">
       <div class="col-lg-12">
       <h2>Наш офис</h2>
-      <img src="img/office_place.jpg" width="600" class="img-rounded center-block" alt="">
+      <img src="img/office_place__600x375.jpg" width="600" class="img-rounded center-block" alt="">
       </div>
     </div>
     </div>
   </section>
-
-
-  <script>
-    ymaps.ready(init);
-    function init(){
-      var map = new ymaps.Map("map", {
-        center: [55.740684, 37.618174],
-        zoom: 15
-      });
-      map.behaviors.disable('scrollZoom');
-      placemark = new ymaps.Placemark([55.740684, 37.618174], {
-        hintContent: 'Твой Дом',
-        balloonContentHeader: 'Твой Дом',
-        balloonContentBody: 'Москва, Старомонетный переулок, 10'
-      });
-      map.geoObjects.add(placemark);
-    }
-  </script>
 
   <!-- Footer -->
   <footer>
@@ -184,10 +163,10 @@
           <br>
           <ul class="list-inline">
             <li>
-              <a href="https://vk.com/"><i class="fab fa-vk fa-fw fa-3x"></i></a>
+              <a href="https://vk.com/"><i class="fa fa-vk fa-fw fa-3x"></i></a>
             </li>
             <li>
-              <a href="http://example.com/"><i class="fas fa-link fa-fw fa-3x"></i></a>
+              <a href="http://example.com/"><i class="fa fa-link fa-fw fa-3x"></i></a>
             </li>
           </ul>
         </div>
@@ -196,7 +175,26 @@
   </footer>
 
   
-  
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script>
+    ymaps.ready(init);
+    function init(){
+      var map = new ymaps.Map("map", {
+        center: [55.740684, 37.618174],
+        zoom: 15
+      });
+      map.behaviors.disable('scrollZoom');
+      placemark = new ymaps.Placemark([55.740684, 37.618174], {
+        hintContent: 'Твой Дом',
+        balloonContentHeader: 'Твой Дом',
+        balloonContentBody: 'Москва, Старомонетный переулок, 10'
+      });
+      map.geoObjects.add(placemark);
+    }
+  </script>  
+
   
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -238,4 +236,5 @@
   </script>
 
 </body>
+
 </html>
