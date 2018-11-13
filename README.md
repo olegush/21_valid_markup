@@ -1,6 +1,6 @@
 # Site of Real Estate Agency
 
-[TODO. There will be project description]
+Landing page for Real Estate Agency "Твой Дом". See [https://olegush.github.io/21_valid_markup/index.html](https://olegush.github.io/21_valid_markup/index.html) on GitHub Pages.
 
 # Project Goals
 
